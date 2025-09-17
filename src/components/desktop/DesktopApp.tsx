@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, BarChart3, Star, CheckCircle2,
-  FileText, Search, Brain, MessageCircle, Scale, ShieldCheck, Clock, Monitor
+  FileText, Search, Brain, MessageCircle, Scale, ShieldCheck, Clock, Monitor, Mail
 } from 'lucide-react';
 
 function App() {
@@ -109,7 +109,7 @@ function App() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Automatisez vos recherches fiscales et générez des consultations expertes en quelques minutes. 
+              Facilitez vos recherches fiscales et obtenez des réponses expertes en quelques minutes. 
               La solution IA conçue spécifiquement pour les experts-comptables français.
             </p>
             
@@ -321,6 +321,16 @@ function App() {
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
                 Casus Genius illimité
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
+                <div>
+                  <div className="flex items-center">
+                    <span className="bg-gradient-to-r from-green-400 to-green-600 text-white text-xs font-bold px-2 py-1 rounded-full mr-2">NEW</span>
+                    <span>Accès à Casus Analyse</span>
+                  </div>
+                  <div className="text-sm text-gray-400 ml-0 mt-1">(Analysez vos liasses fiscales)</div>
+                </div>
               </li>
               <li className="flex items-center text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-green-400 mr-3" />
@@ -651,21 +661,24 @@ function App() {
               role: "Expert-Comptable",
               company: "Beyond Numbers",
               content: "Depuis quelques mois, j'ai intégré Casus à ma pratique quotidienne d'expert-comptable. Il s'agit d'une IA spécialisée dans l'analyse fiscale. Résultat ? Une capacité décuplée à modéliser, comparer, anticiper les conséquences fiscales de différentes options pour mes clients. En quelques minutes, je peux aider mes clients à mieux comprendre les options qui s'offrent à eux, et surtout à saisir les risques et opportunités qui pointent à l'horizon. C'est rapide, clair et incroyablement pédagogique !",
-              rating: 5
+              rating: 5,
+              photo: "/Kadi-seydi-photo.png"
             },
             {
-              name: "Jean Martin",
-              role: "Avocat Fiscaliste",
-              company: "Cabinet Martin & Associés",
-              content: "L'IA de Casus nous permet de proposer un service premium à nos clients. Indispensable !",
-              rating: 5
+              name: "Charly Goutorbe",
+              role: "Avocat fiscaliste",
+              company: "THE PAWN AVOCAT",
+              content: "Meilleur outils d'assistance fiscale testé jusqu'à ce jour. Casus apporte une aide précieuse à une première approche, la compilation de ressources et la mise en forme de réponses apportée à la clientèle, mailing ou consultation. C'est aujourd'hui devenu un indispensable pour le cabinet.",
+              rating: 5,
+              photo: "/charly-Goutorbe-photo.png"
             },
             {
-              name: "Sophie Laurent",
-              role: "Expert-Comptable",
-              company: "Laurent Conseil",
-              content: "Interface intuitive et résultats bluffants. Nos clients sont impressionnés par notre réactivité.",
-              rating: 5
+              name: "Leilla Lecusson",
+              role: "Avocate fiscaliste",
+              company: "LEILLA LECUSSON AVOCAT",
+              content: "L'IA ne remplace pas et ne remplacera jamais (totalement) l'avocat. En revanche, Casus permet à l'avocat de trouver plus rapidement les sources nécessaires pour réaliser son analyse et donc répondre plus rapidement aux besoins des clients. Je suis très contente de faire partie de l'aventure et j'ai hâte de découvrir les prochaines mises à jour !",
+              rating: 5,
+              photo: "/leilla-Lecusson-photo.png"
             }
           ].map((testimonial, index) => (
             <motion.div
@@ -682,10 +695,19 @@ function App() {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-              <div>
-                <div className="font-semibold text-white">{testimonial.name}</div>
-                <div className="text-sm text-gray-400">{testimonial.role}</div>
-                <div className="text-sm text-purple-400">{testimonial.company}</div>
+              <div className="flex items-center">
+                {testimonial.photo && (
+                  <img
+                    src={testimonial.photo}
+                    alt={testimonial.name}
+                    className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-purple-500/30"
+                  />
+                )}
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}</div>
+                  <div className="text-sm text-purple-400">{testimonial.company}</div>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -734,11 +756,11 @@ function App() {
               LinkedIn
             </a>
             <a 
-              href="mailto:adam.telmat@wearecasus.co"
+              href="mailto:contact@wearecasus.co"
               className="text-gray-400 hover:text-white transition-colors flex items-center"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              adam.telmat@wearecasus.co
+              <Mail className="w-5 h-5 mr-2" />
+              contact@wearecasus.co
             </a>
           </div>
           
