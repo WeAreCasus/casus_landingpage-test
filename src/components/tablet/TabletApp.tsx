@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { 
   BarChart3, Star, CheckCircle2,
-  FileText, Search, Brain, MessageCircle, Scale, ShieldCheck, Clock, Monitor, Mail
+  FileText, Search, Brain, Scale, ShieldCheck, Clock, Monitor, Mail
 } from 'lucide-react';
 
 function TabletApp() {
