@@ -62,6 +62,7 @@ function MobileApp() {
             className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg shadow-purple-500/25"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
           >
             Essayez gratuitement
           </motion.button>
@@ -134,6 +135,7 @@ function MobileApp() {
                 className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 w-full"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
               >
                 Tester 1 mois offert — sans engagement
               </motion.button>
@@ -281,7 +283,10 @@ function MobileApp() {
                 Support standard (réponse sous 48h)
               </li>
             </ul>
-            <button className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold">
+            <button 
+              className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold"
+              onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
+            >
               Choisir Starter
             </button>
           </motion.div>
@@ -341,7 +346,10 @@ function MobileApp() {
                 Support prioritaire (réponse sous 24h)
               </li>
             </ul>
-            <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-lg font-bold">
+            <button 
+              className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-lg font-bold"
+              onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
+            >
               Commencer maintenant
             </button>
           </motion.div>
@@ -373,7 +381,10 @@ function MobileApp() {
                 Support dédié
               </li>
             </ul>
-            <button className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold">
+            <button 
+              className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold"
+              onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
+            >
               Choisir Business
             </button>
           </motion.div>

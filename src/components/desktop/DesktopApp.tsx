@@ -63,6 +63,7 @@ function App() {
             className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg shadow-purple-500/25"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
           >
             Essayez gratuitement
           </motion.button>
@@ -151,6 +152,7 @@ function App() {
                 className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 w-full md:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
               >
                 Tester 1 mois offert — sans engagement
               </motion.button>
@@ -307,7 +309,10 @@ function App() {
                 Support standard (réponse sous 48h)
               </li>
             </ul>
-            <button className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold">
+            <button 
+              className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold"
+              onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
+            >
               Choisir Starter
             </button>
           </motion.div>
@@ -378,7 +383,10 @@ function App() {
                 Support prioritaire (réponse sous 24h)
               </li>
             </ul>
-            <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-lg font-bold">
+            <button 
+              className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-lg font-bold"
+              onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
+            >
               Commencer maintenant
             </button>
           </motion.div>
@@ -410,7 +418,10 @@ function App() {
                 Support dédié
               </li>
             </ul>
-            <button className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold">
+            <button 
+              className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold"
+              onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
+            >
               Choisir Business
             </button>
           </motion.div>
@@ -842,9 +853,6 @@ function App() {
       return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const scrollToTarification = () => {
-      document.getElementById('tarifs')?.scrollIntoView({ behavior: 'smooth' });
-    };
 
     if (!showSticky) return null;
 
@@ -855,7 +863,7 @@ function App() {
         className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50"
       >
         <motion.button
-          onClick={scrollToTarification}
+          onClick={() => window.location.href = 'https://mvp.app.wearecasus.com/sign-up'}
           className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-7 py-4 rounded-full font-bold shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 flex items-center space-x-2 relative overflow-hidden"
           whileHover={{ 
             scale: 1.05,
