@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, BarChart3, Star, CheckCircle2,
-  FileText, Search, Brain, Scale, ShieldCheck, Clock, Monitor, Mail
+  FileText, Search, Brain, Scale, ShieldCheck, Clock, Monitor, Mail, Phone
 } from 'lucide-react';
 
 function App() {
@@ -55,7 +55,7 @@ function App() {
             <a href="#solutions" className="text-gray-300 hover:text-white transition-colors">Solutions</a>
             <a href="#tarifs" className="text-gray-300 hover:text-white transition-colors">Tarifs</a>
             <a href="#temoignages" className="text-gray-300 hover:text-white transition-colors">Témoignages</a>
-            <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+            <a href="#footer" className="text-gray-300 hover:text-white transition-colors">Contact</a>
           </nav>
           
           {/* CTA */}
@@ -100,6 +100,15 @@ function App() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* 
+            ====================================
+            🎯 TITRE PRINCIPAL - FACILE À MODIFIER
+            ====================================
+            Pour changer le titre principal :
+            1. Modifiez le texte entre les balises <h1>
+            2. Le texte en violet/bleu est dans le <span> 
+            3. Gardez la même structure pour l'effet visuel
+            */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
               L'IA fiscale qui libère{' '}
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -108,6 +117,14 @@ function App() {
               de recherche.
             </h1>
             
+            {/* 
+            ====================================
+            📝 DESCRIPTION PRINCIPALE - FACILE À MODIFIER
+            ====================================
+            Pour changer la description sous le titre :
+            1. Modifiez le texte entre les balises <p>
+            2. Gardez les deux phrases pour un bon équilibre
+            */}
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Facilitez vos recherches fiscales et obtenez des réponses expertes en quelques minutes. 
               La solution IA conçue spécifiquement pour les experts-comptables français.
@@ -246,7 +263,16 @@ function App() {
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Starter */}
+          {/* 
+          ====================================
+          💰 OFFRE STARTER - FACILE À MODIFIER
+          ====================================
+          Pour changer cette offre :
+          1. Nom de l'offre : Modifiez "Starter"
+          2. Description : Modifiez "Pour un usage modéré" 
+          3. Prix : Modifiez "€99"
+          4. Fonctionnalités : Modifiez les lignes avec CheckCircle2 ci-dessous
+          */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -286,7 +312,18 @@ function App() {
             </button>
           </motion.div>
 
-          {/* Pro - Recommandé avec 1 MOIS OFFERT */}
+          {/* 
+          ====================================
+          🔥 OFFRE PRO (RECOMMANDÉE) - FACILE À MODIFIER
+          ====================================
+          Pour changer cette offre :
+          1. Nom de l'offre : Modifiez "Pro"
+          2. Description : Modifiez "Pour les utilisateurs réguliers"
+          3. Prix barré : Modifiez "€149" 
+          4. Promotion : Modifiez "1 mois offert"
+          5. Badge : Modifiez "Recommandé"
+          6. Fonctionnalités : Modifiez les lignes avec CheckCircle2 ci-dessous
+          */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -720,7 +757,7 @@ function App() {
   // FOOTER COMPONENT
   // ==================================================================================
   const Footer = () => (
-    <footer className="bg-black border-t border-gray-800 py-12">
+    <footer id="footer" className="bg-black border-t border-gray-800 py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
           {/* Logo */}
@@ -740,7 +777,15 @@ function App() {
             Chez Casus, nous sommes une équipe de professionnels du droit passionnés et de spécialistes de l'IA dont la mission est de révolutionner la façon dont les conseils fiscaux sont fournis
           </p>
           
-          {/* Contact */}
+          {/* 
+          ====================================
+          📞 INFORMATIONS DE CONTACT - FACILE À MODIFIER
+          ====================================
+          Pour changer les informations de contact :
+          1. LinkedIn : Modifiez le lien "https://www.linkedin.com/company/wearecasus/"
+          2. Email : Modifiez "contact@wearecasus.co" 
+          3. Téléphone : Modifiez "07 71 67 04 21" et "tel:0771670421"
+          */}
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
             <a 
               href="https://www.linkedin.com/company/wearecasus/" 
@@ -761,6 +806,13 @@ function App() {
             >
               <Mail className="w-5 h-5 mr-2" />
               contact@wearecasus.co
+            </a>
+            <a 
+              href="tel:0771670421"
+              className="text-gray-400 hover:text-white transition-colors flex items-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              07 71 67 04 21
             </a>
           </div>
           

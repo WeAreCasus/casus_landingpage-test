@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { 
   BarChart3, Star, CheckCircle2,
-  FileText, Search, Brain, Scale, ShieldCheck, Clock, Monitor, Mail
+  FileText, Search, Brain, Scale, ShieldCheck, Clock, Monitor, Mail, Phone
 } from 'lucide-react';
 
 function MobileApp() {
@@ -54,7 +54,7 @@ function MobileApp() {
             <a href="#solutions" className="text-gray-300 hover:text-white transition-colors">Solutions</a>
             <a href="#tarifs" className="text-gray-300 hover:text-white transition-colors">Tarifs</a>
             <a href="#temoignages" className="text-gray-300 hover:text-white transition-colors">Témoignages</a>
-            <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+            <a href="#footer" className="text-gray-300 hover:text-white transition-colors">Contact</a>
           </nav>
           
           {/* CTA */}
@@ -720,7 +720,7 @@ function MobileApp() {
   // FOOTER COMPONENT
   // ==================================================================================
   const Footer = () => (
-    <footer className="bg-black border-t border-gray-800 py-12">
+    <footer id="footer" className="bg-black border-t border-gray-800 py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
           {/* Logo */}
@@ -761,6 +761,13 @@ function MobileApp() {
             >
               <Mail className="w-5 h-5 mr-2" />
               contact@wearecasus.co
+            </a>
+            <a 
+              href="tel:0771670421"
+              className="text-gray-400 hover:text-white transition-colors flex items-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              07 71 67 04 21
             </a>
           </div>
           
